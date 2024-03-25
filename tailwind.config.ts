@@ -8,6 +8,9 @@ export default {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+      minHeight: {
+        'screen-header': 'calc(100vh - 40px)',
+      },
     },
   },
   plugins: [],

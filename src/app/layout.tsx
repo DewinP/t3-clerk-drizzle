@@ -26,8 +26,11 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`font-sans ${inter.variable}`}>
-          <HeaderNav />
+        <HeaderNav />
+        <main className="flex min-h-screen-header flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
           <TRPCReactProvider>{children}</TRPCReactProvider>
+        </main>
+         
         </body>
       </html>
     </ClerkProvider>
