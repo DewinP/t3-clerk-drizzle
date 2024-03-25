@@ -19,11 +19,11 @@ export default async function Home() {
           All posts
         </h1>
         <ul  className="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
-        {allPosts ?  allPosts.map((post) => (
+        {allPosts && allPosts.length > 0 ?  allPosts.map((post) => (
               <li key={post.id}>
                   {post.name}
               </li>
-            )) : <li><p>Loading posts...</p></li>}
+            )) : <li>No posts yet</li>}
             </ul>
       </div>
   );
