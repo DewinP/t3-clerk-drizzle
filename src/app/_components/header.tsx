@@ -3,7 +3,8 @@ import { UserButton, useUser } from "@clerk/nextjs";
 import Link from "next/link";
 
 const navigation = [
-  { name: "Create Post", href: "/create-post" },
+  { name: "Create Post", href: "/create-post", protected: true },
+  { name: "All Posts", href: "/", protected: false },
 ];
 
 export default function Example() {
@@ -31,6 +32,7 @@ export default function Example() {
               key={item.name}
               href={item.href}
               className="text-sm font-semibold leading-6 text-gray-900"
+              hidden={item.protected && !isSignedIn}
             >
               {item.name}
             </Link>
